@@ -9,4 +9,4 @@ def hello():
 
 @app.route("/contatos")
 def contato():
-    return "Danilo de Souza, email danilo@souza"
+    return "Danilo de Souza, email danilo@souza.br"
