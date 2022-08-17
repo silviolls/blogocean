@@ -1,19 +1,29 @@
 {% extends "base.html" %}
 
-   <a href="http://www.google.com" target="_blank">Vai para o Google</a>
+{% block titulo %}INDEX-BLOG{% endblock titulo %}
 
-   {% if usuario[2] == "Professor" %}
-   <h2>Bem vindo, Teacher {{usuario[1]}}!</h2>
-   {% else %}
-   <h2>Bem vindo, Aluno!</h2>
+{% block content %}
+
+   {% for post in posts %}
+   <article class="classeartigo">
+      <header>
+         <div>
+            <h1>{{post.title}}</h1>
+            <div class="classesobre">
+               <p><i>Criado por {{post.autor}} em {{post.created}}.</i></p>
+            </div>
+         </div>
+      </header>
+      <P class="classepar">{{post.body}}</P>
+   </article>
+   {% if not loop.last %}
+   <hr>
    {% endif %}
-   {%for al in aluno%}
-   <h4>Aluno: {{al}}</h4>
    {% endfor %}
    
-   <h1>{{nome}}</h1>
+
    <h1>Danilo de Souza</h1>
    <h2>email danilo@souza.com.br</h2>
    <h3>fone (19) 2318-4431</h3>
-</body>
-</html>
+
+{% endblock content %}

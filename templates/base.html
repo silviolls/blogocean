@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Contatos</title>
+        <title>{% block titulo %} {% endblock titulo %}</title>
     </head>
     <body>
-    <h1>Ocean Programação Python para Web</h1>
-    <section>
-        {%block content%}
-        {%end block%}
-    </section>
+        <h1>Ocean Programação Python para Web dentro do arquivo base-html</h1>
+        <section class="conteudo">
+            {% block content %}        
+            {% endblock content %}
+        </section>
+    </body>
 </html>
