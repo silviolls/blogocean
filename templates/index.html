@@ -10,7 +10,7 @@
          <div>
             <h1>{{post.title}}</h1>
             <div class="classesobre">
-               <p><i>Criado por {{post.autor}} em {{post.created}}.</i></p>
+               <p>Criado por {{post.autor}} em {{ post['created'].strftime('%d/%m/%Y') }}.</p>
             </div>
          </div>
       </header>
@@ -22,8 +22,8 @@
    {% endfor %}
    
 
-   <h1>Danilo de Souza</h1>
-   <h2>email danilo@souza.com.br</h2>
-   <h3>fone (19) 2318-4431</h3>
+   <h3>Danilo de Souza<br>
+   email danilo@souza.com.br<br>
+   fone (19) 2318-4431</h3>
 
 {% endblock content %}

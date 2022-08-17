@@ -1,0 +1,21 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    height: 100%;
+    background: navy;
+}
+
+body {
+    background: white;
+    color: green;
+    padding-left: 10rem;
+}
+
+.classeartigo {
+    background-color: yellow;
+}
+
+.classeartigo .classesobre {
+    color: blue;
+    font-style: italic;
+}
