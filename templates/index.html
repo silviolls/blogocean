@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-       <title>Contatos</title>
-    </head>
-    <body>
-       <a href="http://www.google.com" target="_blank">Vai para o Google</a>
+{% extends "base.html" %}
 
-       {% if usuario[2] == "Professor" %}
-       <h2>Bem vindo, Teacher {{usuario[1]}}!</h2>
-       {% else %}
-       <h2>Bem vindo, Aluno!</h2>
-       {% endif %}
-       {%for al in aluno%}
-       <h4>Aluno: {{al}}</h4>
-       {% endfor %}
-       
-       <h1>{{nome}}</h1>
-       <h1>Danilo de Souza</h1>
-       <h2>email danilo@souza.com.br</h2>
-       <h3>fone (19) 2318-4431</h3>
-    </body>
+   <a href="http://www.google.com" target="_blank">Vai para o Google</a>
+
+   {% if usuario[2] == "Professor" %}
+   <h2>Bem vindo, Teacher {{usuario[1]}}!</h2>
+   {% else %}
+   <h2>Bem vindo, Aluno!</h2>
+   {% endif %}
+   {%for al in aluno%}
+   <h4>Aluno: {{al}}</h4>
+   {% endfor %}
+   
+   <h1>{{nome}}</h1>
+   <h1>Danilo de Souza</h1>
+   <h2>email danilo@souza.com.br</h2>
+   <h3>fone (19) 2318-4431</h3>
+</body>
 </html>
